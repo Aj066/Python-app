@@ -5,7 +5,7 @@ pipeline {
 
         stage('Build docker image') {
             steps {  
-                sh 'docker build -t vatsraj/pythonapp:$BUILD_NUMBER .'
+                sh 'docker build -t aj000/pythonapp:$BUILD_NUMBER .'
             }
         }
 
@@ -26,7 +26,7 @@ pipeline {
 
         stage('Push image') {
             steps {
-                sh 'docker push vatsraj/pythonapp:$BUILD_NUMBER'
+                sh 'docker push aj000/pythonapp:$BUILD_NUMBER'
             }
         }
     }
